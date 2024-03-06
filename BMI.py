@@ -1,29 +1,41 @@
+
+def calculate_bmi(height_feet, height_inches, weight_pounds):
+    # Convert height to total inches
+    total_height_inches = height_feet * 12 + height_inches
+    
+    # Convert weight from pounds to kilograms
+    weight_kg = weight_pounds * 0.45
+    
+    # Convert height from inches to meters
+    height_meters = total_height_inches * 0.025
+    
+    # Calculate BMI
+    bmi = weight_kg / (height_meters ** 2)
+    bmi = round(bmi, 1)
+
+    return bmi
+
+def categorize_bmi(bmi):
+    if bmi < 18.5:
+        return "underweight"
+    elif 18.5 <= bmi < 25:
+        return "normal"
+    elif 25 <= bmi < 30:
+        return "overweight"
+    else:
+        return "obese"
+
 if __name__ == '__main__':
-    #user inputs
+    # User inputs
     print("Enter your height (press Enter after each): _____ foot _____ inches")
     user_height_feet = float(input())
     user_height_inches = float(input())
 
     user_weight = float(input("Enter your weight in pounds: "))
 
-    #calculations
-    weight_kg = user_weight * 0.45
-    total_height_inches = (user_height_feet * 12) + user_height_inches
+    # Calculations
+    bmi = calculate_bmi(user_height_feet, user_height_inches, user_weight)
 
-    height_meters = total_height_inches * 0.025
-    height_squared = height_meters * height_meters
-
-    userBMI = weight_kg / height_squared
-
-    #BMI indexing and output
-    if userBMI < 18.5:
-        print("You are considered underweight with a BMI of: ", userBMI)
-
-    elif userBMI >= 18.5 and userBMI < 25:
-        print("You are considered normal weight with BMI of: ", userBMI)
-
-    elif userBMI >= 25 and userBMI < 30:
-        print("You are considered overweight with BMI of: ", userBMI)
-    
-    else:
-        print("You are considered obese with BMI of: ", userBMI)
+    # BMI indexing and output
+    print("Your BMI is: ", bmi)
+    print("You are considered", categorize_bmi(bmi))
