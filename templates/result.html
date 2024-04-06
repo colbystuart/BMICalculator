@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>BMI Result</title>
+</head>
+<body>
+    <div class="container">
+        <h1>BMI Result</h1>
+        <div class="result">
+            <p>Your BMI is: <span>{{ bmi }}</span></p>
+            <p>You are considered: <span>{{ bmi_category }}</span></p>
+        </div>
+        <button onclick="window.location.href='/'" class="calculate-again">Calculate Again</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(95, 27, 173, 0.324);
+    font-size: large;
+}
+
+.container {
+    padding: 100px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.223);
+    border-radius: 15px;
+    transform: translate(0, 60px);
+    width: 350px;
+    font-weight: 600;
+}
+
+.input-group {
+    padding: 10px;
+    text-align: center;
+
+}
+
+input[type="number"] {
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+.calculate-bmi {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(210, 162, 255);
+    font-weight: bold;
+}
+
+.calculate-again {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(210, 162, 255);
+    font-weight: bold;
+}
+
+.error-message {
+    padding-top: 150px;
+}
