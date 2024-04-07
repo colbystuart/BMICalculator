@@ -32,4 +32,4 @@ def test_obese():
 
 #math calculation test
 def test_calculation():
-    assert calculate_bmi(5, 8, 175) == 27.2
+    assert calculate_bmi(5, 8, 175) == 26.6
